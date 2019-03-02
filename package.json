@@ -1,0 +1,32 @@
+{
+  "name": "duaelmix",
+  "version": "1.0.0",
+  "dependencies": {
+    "dialog-polyfill": "0.4.10",
+    "firebase": "^5.8.3",
+    "lit-element": "^2.0.1",
+    "lodash.clonedeep": "^4.5.0",
+    "universal-analytics": "^0.4.20"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "eslint": "^5.15.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "file-loader": "^3.0.1",
+    "firebase-admin": "^7.0.0",
+    "firebase-functions": "^2.2.0",
+    "firebase-tools": "^6.4.0",
+    "html-webpack-plugin": "^3.2.0",
+    "patch-package": "^6.0.5",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "private": true,
+  "scripts": {
+    "postinstall": "patch-package",
+    "start": "webpack-dev-server --open",
+    "deploy": "webpack && cd firebase && firebase deploy"
+  }
+}
